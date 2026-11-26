@@ -10,7 +10,6 @@ import { clearAllLogs, mainLogger } from './logger.js';
 import { extractCharacterInfo } from './character_extractor.js';
 import { addCharacterDiary } from './character_diary.js';
 import { deleteWorldBookEntries, deleteAllDiaryEntries } from './worldbook_manager.js';
-import { hideModal } from './drawer.js';
 
 const extensionName = "SillyTavern-AutoPlotEngine";
 
@@ -609,7 +608,6 @@ export function initializeSettings() {
         modalSaveButton.addEventListener('click', () => {
             saveAllFromUI();
             toastr.success("设置已保存", "AI组手");
-            hideModal();
         });
     }
     
